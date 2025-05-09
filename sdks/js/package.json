@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "build-no-cache": "yarn build --force",
-    "build": "turbo run build",
+    "build": "cross-env NODE_ENV=production yarn tsc && tsup",
     "checks": "yarn deps:check && turbo run lint format test circular-deps package:checks",
     "circular-deps": "turbo run circular-deps",
     "clean": "turbo run clean",
